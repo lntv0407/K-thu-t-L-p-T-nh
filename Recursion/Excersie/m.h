@@ -9,7 +9,7 @@ int pow(int x, int n) {
 }
 
 int factorial(int n) {
-    int temp;
+    int temp = 1;
     for(int i = 1; i <= n; i++)
         temp *= i;
     return temp;

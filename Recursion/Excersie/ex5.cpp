@@ -2,9 +2,9 @@
 #include "m.h"
 using namespace std;
 
-double Total(int t, int n, int x) {
-    if(n < 0) return t;
-    t += (double) pow(x, 2*n + 1)/factorial(n);
+double Total(double t, int n, int x) {
+    if(n == 0) return t;
+    t += (double) pow(x, n) / factorial(n);
     return Total(t, n -= 1, x);
 }
 
