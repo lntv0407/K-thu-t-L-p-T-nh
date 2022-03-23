@@ -4,8 +4,7 @@ using namespace std;
 
 int Total(int t, int n, int x) {
     if(n < 0) return t;
-    t += pow(x, 2*n + 1);
-    return Total(t, n -= 1, x);
+    return  pow(x, 2*n + 1) + Total(t, n -= 1, x);
 }
 
 int main() {

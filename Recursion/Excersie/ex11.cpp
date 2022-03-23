@@ -1,17 +1,23 @@
 #include <iostream>
+#include "OP.h"
 using namespace std;
 
-int Sum(int temp, int n) {
-    if(n == 0) return temp;
-    if((n % 10) % 2 == 0) temp += (n % 10);
-    return Sum(temp, n /= 10);
+int Sum(int s, int *a, int n) {
+    if(n < 0) return s;
+    s += *(a + n - 1);
+    return Sum(s, a, n - 1);  
 }
+
 
 int main() {
     int n; cout << "Enter n: "; cin >> n; 
     int* a = new int[n];
     
-    count = Sum(count, n);
-    cout << "Enter sum: " << count;
+    Input(a, n);
+    Output(a, n);
+    int s = 0;
+    s = Sum(s, a, n);
+    cout << "Value: " << s;
+    delete []a;
     return 0;
 }
