@@ -1,5 +1,5 @@
 #include <iostream>
-<<<<<<< HEAD
+#include "OP.h"
 using namespace std;
 
 int Tongsonapchai(int TongSoChai, int NapHienCo) {
@@ -12,9 +12,8 @@ int Tongsonapchai(int TongSoChai, int NapHienCo) {
     TongSoChai += Chai;
     if((Chai + NapDu) > 4) return Tongsonapchai(TongSoChai, Chai + NapDu);
     return TongSoChai;
-=======
-#include "OP.h"
-using namespace std;
+}
+
 
 bool CheckPrimeNumber(int n) {
     if(n < 2) return false;
@@ -48,5 +47,4 @@ int main() {
     cout << "Value: " << s;
     delete []a;
     return 0;
->>>>>>> 691c1e3d642848cc74ce881534b9a9f20d94c57b
 }
