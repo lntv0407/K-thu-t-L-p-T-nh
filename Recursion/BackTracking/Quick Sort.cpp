@@ -2,12 +2,6 @@
 #include <cstdlib>
 using namespace std;
 
-// void swap(int* a, int* b) {
-//     int t = *a;
-//     *a = *b;
-//     *b = t;
-// }
-
 int Partion(int a[], int l, int r) {
     int pivot = a[r];
     int i = l - 1;
