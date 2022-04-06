@@ -1,8 +1,7 @@
 #include <iostream>
-#include <cstdlib>
 using namespace std;
 
-int Partion(int a[], int l, int r) {
+int Partition(int a[], int l, int r) {
     int pivot = a[r];
     int i = l - 1;
     for(int j = l; j <= r; j++) {
@@ -17,14 +16,14 @@ int Partion(int a[], int l, int r) {
 
 void QuickSort(int a[], int l, int r) {
     if(l < r) {
-        int p = Partion(a, l, r);
-        QuickSort(a, l, p - 1);
-        QuickSort(a, p + 1, r);
+        int pi = Partition(a, l, r);
+        QuickSort(a, l, pi - 1);
+        QuickSort(a, pi + 1, r);
     }
 }
 
 void Output(int a[], int n) {
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++) 
         cout << a[i] << " ";
     cout << endl;
 }
